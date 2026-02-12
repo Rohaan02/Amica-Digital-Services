@@ -99,12 +99,18 @@ const Footer = () => {
             </li>
             <li className="flex items-start space-x-3">
               <span className="material-icons text-xs mt-1 text-primary">
+                phone
+              </span>
+              <span>+44 7808 014132</span>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="material-icons text-xs mt-1 text-primary">
                 location_on
               </span>
               <span>
-                1200 Innovation Way, Suite 400
+                378 Claremont Road, Manchester
                 <br />
-                San Francisco, CA 94105
+                M14 7WB
               </span>
             </li>
           </ul>

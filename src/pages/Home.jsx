@@ -267,7 +267,7 @@ const Home = () => {
       <section className="py-24 bg-white dark:bg-slate-950/50">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
-            title="Why Businesses Choose Amica"
+            title="Why Amica Digital Services?"
             description="We don't just follow trends; we engineer the future of digital presence using proprietary AI models and battle-tested workflows."
             className="mb-16"
           />

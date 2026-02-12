@@ -115,7 +115,7 @@ const Services = () => {
                 <span className="text-primary">AI Services</span>
               </>
             }
-            description="Empowering modern businesses with bespoke AI automation, high-performance software, and data-driven growth strategies."
+            description="We provide end-to-end digital growth solutions, enhanced with AI automation, virtual assistants, and intelligent agents."
           />
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
             <Button size="lg" variant="primary">
