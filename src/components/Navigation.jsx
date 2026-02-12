@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Navigation = ({ variant = "default", isDark = false }) => {
   const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "How It Works", href: "/#process" },
-    { label: "Industries", href: "/#industries" },
     { label: "Pricing", href: "/pricing" },
-    { label: "About", href: "/about" },
   ];
 
   const getNavClass = () => {

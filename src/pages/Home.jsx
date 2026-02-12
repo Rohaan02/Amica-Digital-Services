@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -31,7 +31,7 @@ const Home = () => {
     {
       icon: "smart_toy",
       iconColor: "text-accent-emerald",
-      title: "AI Assistants",
+      title: "AI Virtual Assistants",
       description:
         "Custom-trained LLM agents that handle customer support and sales bookings 24/7.",
       features: ["Voice AI Calling", "24/7 Web Chat"],
@@ -49,7 +49,7 @@ const Home = () => {
     {
       icon: "code",
       iconColor: "text-rose-500",
-      title: "Custom Software",
+      title: "Web & Custom Software",
       description:
         "Bespoke digital tools built to solve your unique operational bottlenecks.",
       features: ["SaaS Development", "API Integrations"],
@@ -58,7 +58,7 @@ const Home = () => {
     {
       icon: "security",
       iconColor: "text-slate-500",
-      title: "AI Compliance",
+      title: "Responsible AI",
       description:
         "Protect your business with ethical AI frameworks and data privacy safeguards.",
       features: ["Risk Assessment", "Governance Tools"],
@@ -68,43 +68,39 @@ const Home = () => {
 
   const whyChooseUs = [
     {
-      icon: "verified",
-      iconColor: "text-primary",
-      iconBg: "bg-primary/10",
-      title: "Proven ROI",
-      description:
-        "Data-backed strategies that guarantee measurable growth within 90 days.",
-    },
-    {
       icon: "psychology",
       iconColor: "text-accent-emerald",
       iconBg: "bg-accent-emerald/10",
-      title: "AI First",
-      description:
-        "Leveraging 2026-spec intelligence for lead gen and automation.",
+      title: "AI-first Approach",
+      description: "Not outdated agency methods.",
     },
     {
-      icon: "speed",
-      iconColor: "text-accent-indigo",
+      icon: "auto_awesome",
+      iconColor: "text-primary",
+      iconBg: "bg-primary/10",
+      title: "Smart Automation",
+      description: "That reduces staff workload.",
+    },
+    {
+      icon: "verified",
+      iconColor: "text-emerald-500",
       iconBg: "bg-accent-indigo/10",
-      title: "24/7 Velocity",
-      description:
-        "Our systems work while you sleep, ensuring no lead is left behind.",
+      title: "Responsible AI",
+      description: "Ethical & responsible AI usage",
     },
     {
       icon: "shield",
       iconColor: "text-amber-500",
       iconBg: "bg-amber-500/10",
       title: "Compliance",
-      description: "GDPR and SOC2 compliant automation architectures.",
+      description: "Aware digital systems.",
     },
     {
-      icon: "hub",
+      icon: "engineering",
       iconColor: "text-rose-500",
       iconBg: "bg-rose-500/10",
-      title: "Full Stack",
-      description:
-        "From SEO to custom software, we cover the entire digital ecosystem.",
+      title: "Built by operators",
+      description: "NOT “marketing influencers”",
     },
   ];
 
@@ -112,39 +108,53 @@ const Home = () => {
     {
       number: 1,
       title: "Attract",
-      description:
-        "Multi-channel AI traffic generation targeting your high-intent audience profile.",
+      description: "SMM, SEO, ads, content & visibility.",
       isActive: true,
     },
     {
       number: 2,
       title: "Engage",
-      description:
-        "Hyper-personalized landing experiences and content that resonates instantly.",
+      description: "AI chat, virtual assistants, lead capture.",
       isActive: true,
     },
     {
       number: 3,
       title: "Qualify",
-      description:
-        "AI screening agents filter leads based on budget, need, and decision authority.",
+      description: "AI agents score & route leads.",
       isActive: false,
     },
     {
       number: 4,
       title: "Convert",
-      description:
-        "Seamless handoff to your sales team or direct AI booking into your calendar.",
+      description: "CRM, bookings, follow-ups.",
       isActive: false,
     },
     {
       number: 5,
       title: "Optimise",
-      description:
-        "Continuous data analysis and model training to lower CAC and increase LTV.",
+      description: "Data, reporting & continuous improvement.",
       isActive: false,
     },
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const slides = [
+    "Amica Digital Services helps ambitious businesses grow using AI-driven marketing systems, intelligent automation, and next-generation digital infrastructure.",
+    "We don't just market your business — we install scalable growth engines powered by AI.",
+    "Built for service businesses, healthcare, medical tourism, and regulated industries.",
+  ];
+
+  useEffect(() => {
+    let interval;
+    if (!isHovered) {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 3000);
+    }
+    return () => clearInterval(interval);
+  }, [isHovered, slides.length]);
 
   const industries = [
     { icon: "health_and_safety", label: "Healthcare & Care Services" },
@@ -160,7 +170,7 @@ const Home = () => {
       <Navigation variant="glass" />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden dark:bg-background-dark hero-gradient">
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden dark:bg-background-dark hero-gradient pb-10">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 blur-[100px] rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-indigo/20 blur-[100px] rounded-full"></div>
@@ -182,10 +192,32 @@ const Home = () => {
               </span>
             </h1>
 
-            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-xl">
-              Marketing. Automation. Intelligence. Results. We build the
-              infrastructure that scales your revenue while you sleep.
-            </p>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-300 mb-8  inline-block pb-2">
+              Marketing. Automation. Intelligence. Results.
+            </h2>
+
+            <div
+              className="relative h-20 flex overflow-hidden"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              {slides.map((slide, index) => (
+                <p
+                  key={index}
+                  className={`
+                absolute text-xl text-slate-600 dark:text-slate-400 max-w-xl mx-auto
+                transition-all duration-700 ease-in-out transform
+                ${
+                  index === currentSlide
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }
+              `}
+                >
+                  {slide}
+                </p>
+              ))}
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="primary">
@@ -196,7 +228,7 @@ const Home = () => {
               </Button>
             </div>
 
-            <div className="flex items-center space-x-6 pt-4">
+            {/* <div className="flex items-center space-x-6 pt-4">
               <div className="flex -space-x-3">
                 {[1, 2, 3].map((i) => (
                   <div
@@ -213,7 +245,7 @@ const Home = () => {
                   Average 4.9/5 satisfaction rate
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative hidden lg:block">
@@ -276,6 +308,12 @@ const Home = () => {
             ))}
           </div>
         </div>
+
+        <div className="mt-12 w-full flex justify-center">
+          <Button variant="ghost" icon="arrow_forward">
+            See All Services
+          </Button>
+        </div>
       </section>
 
       {/* How We Work */}
@@ -289,7 +327,7 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <SectionHeader
-            title="The Amica Framework"
+            title="How We Work"
             titleClass="text-white"
             description="A systematic, 5-step engine designed for rapid deployment and sustainable scale."
             className="mb-20 text-white"
@@ -323,7 +361,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
-                Expertise Across Verticals
+                Industries We Serve
               </h2>
               <p className="text-slate-500 mb-10 text-lg">
                 We build industry-specific AI brains that understand the
@@ -369,11 +407,14 @@ const Home = () => {
 
             <div className="relative z-10">
               <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-8">
-                Ready to Automate Your Success?
+                Ready to future-proof your
+                <br />
+                digital growth?
               </h2>
               <p className="text-white/80 text-xl max-w-2xl mx-auto mb-12">
-                Join the hundreds of forward-thinking businesses leveraging
-                Amica to drive consistent, intelligent growth.
+                Stop paying for disconnected services.
+                <br />
+                Start building an AI-powered growth system.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -384,7 +425,7 @@ const Home = () => {
                 >
                   Book Your Free Strategy Call
                 </Button>
-                <div className="text-left">
+                {/* <div className="text-left">
                   <div className="flex items-center text-white mb-1">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <span key={i} className="material-icons text-amber-400">
@@ -395,7 +436,7 @@ const Home = () => {
                   <p className="text-white/70 text-sm font-medium">
                     Limited spots available for Q3 2026
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
