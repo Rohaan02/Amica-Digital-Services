@@ -8,55 +8,80 @@ const Services = () => {
   const services = [
     {
       icon: "trending_up",
-      title: "AI Lead Gen & Growth",
-      description:
-        "Supercharge your sales pipeline with autonomous prospecting systems. We build custom AI models that identify, qualify, and engage your ideal customers 24/7.",
+      title: "AI Lead Generation & Growth Marketing",
+      description: "Leads that convert — not just traffic.",
       features: [
-        "Hyper-personalized cold outreach",
-        "Predictive lead scoring & behavior analysis",
-        "Automated multi-channel follow-ups",
+        "AI-assisted Google & social ads",
+        "Conversion-optimised funnels",
+        "SEO with AI keyword intelligence",
+        "Lead quality scoring & tracking",
+        "Multi-channel attribution",
       ],
-      image: null, // Placeholder
+      image: null,
       imagePosition: "right",
+      cta: "Get More Qualified Leads",
     },
     {
       icon: "settings_suggest",
-      title: "AI Automation & CRM",
-      description:
-        "Eliminate repetitive tasks and streamline your operations. We integrate intelligent workflows into your existing CRM to ensure no data is lost and every process is optimized.",
+      title: "AI Automation & CRM Systems",
+      description: "Automate the work your team shouldn't be doing.",
       features: [
-        "Custom API & Zapier integrations",
-        "Intelligent document processing (OCR)",
-        "Dynamic CRM data enrichment",
+        "CRM setup (HubSpot, Zoho, custom)",
+        "Automated follow-ups (email / WhatsApp*)",
+        "Booking & scheduling systems",
+        "Pipeline automation & reporting",
+        "Internal workflow optimisation",
       ],
       image: null,
       imagePosition: "left",
+      cta: "Automate My Business",
     },
     {
       icon: "smart_toy",
-      title: "AI Virtual Assistants",
-      description:
-        "Custom-trained LLM agents that know your business inside and out. From customer support to internal knowledge bases, our assistants provide instant, accurate responses.",
+      title: "AI Virtual Assistants & AI Agents",
+      description: "24/7 intelligent digital staff.",
       features: [
-        "Private GPT instances with RAG",
-        "Multilingual support (50+ languages)",
-        "Sentiment analysis & human hand-off",
+        "Website AI chat assistants",
+        "Lead qualification agents",
+        "Customer support automation",
+        "Multilingual AI agents (UK / EU / UAE)",
+        "Human handover when required",
       ],
+      subtitle: "Ethical. Transparent. Controlled.",
       image: null,
       imagePosition: "right",
+      cta: "Deploy an AI Assistant",
     },
     {
-      icon: "language",
-      title: "SEO & Social Systems",
-      description:
-        "Dominate search results and social feeds with AI-assisted content distribution. We build systems that automate the creation and scheduling of high-ranking content.",
+      icon: "search",
+      title: "SEO, Content & Social Media Systems",
+      description: "Visibility that compounds.",
       features: [
-        "Programmatic SEO for thousands of keywords",
-        "AI-powered social media repurposing",
-        "Competitor movement tracking",
+        "Technical & on-page SEO",
+        "AI-assisted content strategy",
+        "Social media frameworks",
+        "Content repurposing systems",
+        "Authority & trust building",
       ],
       image: null,
       imagePosition: "left",
+      cta: "Grow My Online Presence",
+    },
+    {
+      icon: "verified_user",
+      title: "Responsible AI & Digital Compliance",
+      description: "AI done right.",
+      features: [
+        "AI usage policies",
+        "Consent-aware automation",
+        "GDPR & data best-practice guidance",
+        "Regulated-industry awareness",
+        "Ethical AI frameworks",
+      ],
+      subtitle: "(Guidance, not legal certification)",
+      image: null,
+      imagePosition: "right",
+      cta: "Discuss Compliance & AI",
     },
   ];
 
@@ -64,38 +89,43 @@ const Services = () => {
     {
       title: "Business Websites",
       price: "£950",
-      description: "Best for professional service providers and startups.",
-      features: ["Custom UI/UX Design", "Mobile Optimized", "CMS Integration"],
-    },
-    {
-      title: "Portals",
-      price: "£2,500",
-      description: "Best for client management and internal dashboards.",
       features: [
-        "Secure Auth Systems",
-        "User Roles & Permissions",
-        "Custom Databases",
+        "Conversion-focused design",
+        "CMS setup",
+        "Performance optimisation",
+        "Analytics & tracking",
       ],
     },
     {
-      title: "Custom Software",
-      price: "£4,500",
-      description: "Best for workflow automation and unique operations.",
+      title: "Client Portals & Dashboards",
+      price: "£2,500",
       features: [
-        "AI Model Integration",
-        "Third-party API Sync",
-        "Advanced Reporting",
+        "Secure login & user roles",
+        "Data dashboards",
+        "CRM or system integrations",
+        "Access & permission controls",
+      ],
+    },
+    {
+      title: "Custom Software & Integrations",
+      price: "£4,500",
+      features: [
+        "Bespoke functionality",
+        "API integrations",
+        "Workflow automation",
+        "Scalability & security planning",
       ],
       highlighted: true,
     },
     {
-      title: "SaaS Platforms",
-      price: "£7,500",
-      description: "Best for software products and subscription apps.",
+      title: "SaaS & Marketplace Support",
+      price: "£7,500+",
+      description: "Project-based or retainer.",
       features: [
-        "Payment Gateways (Stripe)",
-        "Multi-tenant Architecture",
-        "Scalable Infrastructure",
+        "Platform architecture",
+        "Feature development",
+        "Optimisation & scaling",
+        "Ongoing technical support",
       ],
     },
   ];
@@ -117,220 +147,253 @@ const Services = () => {
             }
             description="We provide end-to-end digital growth solutions, enhanced with AI automation, virtual assistants, and intelligent agents."
           />
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <Button size="lg" variant="primary">
-              View Pricing Guide
-            </Button>
-            <Button size="lg" variant="secondary">
-              Our Process
-            </Button>
-          </div>
         </div>
       </header>
 
       {/* Service Blocks */}
       <main className="py-20 space-y-32">
-        {services.map((service, index) => (
-          <section key={index} className="max-w-7xl mx-auto px-6">
-            <div
-              className={`grid md:grid-cols-2 gap-16 items-center ${
-                service.imagePosition === "left" ? "" : "md:grid-flow-dense"
-              }`}
-            >
-              <div
-                className={
-                  service.imagePosition === "right" ? "order-2 md:order-1" : ""
-                }
-              >
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                  <span className="material-icons text-primary text-3xl">
-                    {service.icon}
-                  </span>
-                </div>
-                <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
-                  {service.title}
-                </h2>
-                <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
-                  {service.description}
-                </p>
-                <ul className="space-y-4 mb-10">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      <span className="material-icons text-primary text-sm">
-                        check_circle
-                      </span>
-                      <span className="font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button variant="primary" size="lg">
-                  {service.title.includes("Lead") && "Get More Qualified Leads"}
-                  {service.title.includes("Automation") &&
-                    "Automate My Business"}
-                  {service.title.includes("Assistant") &&
-                    "Deploy an AI Assistant"}
-                  {service.title.includes("SEO") && "Scale My Visibility"}
-                </Button>
-              </div>
+        {services.map((service, index) => {
+          const isEven = index % 2 === 0; //for swapping the side of content and image of the services
 
-              <div
-                className={`relative ${
-                  service.imagePosition === "right" ? "order-1 md:order-2" : ""
-                }`}
-              >
-                <div
-                  className={`absolute inset-0 bg-primary/5 rounded-3xl ${
-                    service.imagePosition === "left" ? "rotate-3" : "-rotate-3"
-                  } scale-105`}
-                ></div>
-                <div className="relative rounded-3xl shadow-2xl w-full h-[400px] bg-slate-300 dark:bg-slate-700"></div>
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* Web & Custom Software Pricing */}
-        <section className="bg-slate-50 dark:bg-slate-900/50 py-24 border-y border-slate-200 dark:border-slate-800">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <div className="w-8 h-px bg-primary"></div>
-                <span className="text-primary font-bold uppercase tracking-widest text-sm">
-                  Engineering Suite
-                </span>
-                <div className="w-8 h-px bg-primary"></div>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">
-                Web & Custom Software
-              </h2>
-              <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                High-end development tailored to your enterprise needs. From
-                sleek business sites to complex SaaS platforms.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {softwarePackages.map((pkg, index) => (
-                <div
-                  key={index}
-                  className={`p-8 rounded-2xl flex flex-col group ${
-                    pkg.highlighted
-                      ? "bg-white dark:bg-slate-800 border-2 border-primary/20 shadow-lg shadow-primary/5 hover:shadow-xl hover:border-primary relative scale-105 z-10"
-                      : "bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-primary/50"
-                  } transition-all`}
-                >
-                  {pkg.highlighted && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                      Most Popular
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold mb-2">{pkg.title}</h3>
-                  <div className="flex items-baseline gap-1 mb-6">
-                    <span className="text-slate-400 text-sm font-medium">
-                      from
-                    </span>
-                    <span className="text-3xl font-extrabold text-slate-900 dark:text-white">
-                      {pkg.price}
+          return (
+            <section key={index} className="max-w-7xl mx-auto px-6">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                {/* Text Column */}
+                <div className={isEven ? "" : "md:order-2"}>
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                    <span className="material-icons text-primary text-3xl">
+                      {service.icon}
                     </span>
                   </div>
-                  <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100 dark:border-slate-700">
-                    {pkg.description}
+
+                  <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
+                    {service.title}
+                  </h2>
+
+                  <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
+                    {service.description}
                   </p>
-                  <ul className="space-y-4 mb-8 flex-grow">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm">
-                        <span className="material-icons text-primary text-xs mt-0.5">
-                          done
+
+                  <ul className="space-y-4 mb-10">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        <span className="material-icons text-primary text-sm">
+                          check_circle
                         </span>
-                        <span
-                          className={pkg.highlighted ? "font-semibold" : ""}
-                        >
-                          {feature}
-                        </span>
+                        <span className="font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8 border-t border-slate-200 dark:border-slate-800">
-              <Button icon="calendar_today" iconPosition="left" size="lg">
-                Request a Technical Discovery Call
-              </Button>
-              <Button
-                variant="secondary"
-                icon="calculate"
-                iconPosition="left"
-                size="lg"
-              >
-                Get a Project Cost Estimate
-              </Button>
-            </div>
-          </div>
-        </section>
+                  {service.subtitle && (
+                    <h3 className="text-2xl font-semibold text-primary mb-6">
+                      {service.subtitle}
+                    </h3>
+                  )}
 
-        {/* Compliance Section */}
-        <section className="max-w-7xl mx-auto px-6">
-          <div className="bg-slate-900 rounded-3xl p-12 md:p-20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/20 blur-3xl rounded-full"></div>
-
-            <div className="relative z-10 grid md:grid-cols-2 gap-16 items-center">
-              <div>
-                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
-                  <span className="material-icons text-white text-3xl">
-                    verified_user
-                  </span>
-                </div>
-                <h2 className="text-4xl font-extrabold text-white mb-6">
-                  Responsible AI & Compliance
-                </h2>
-                <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                  We don't just build fast; we build safe. All our solutions
-                  adhere to strict data protection regulations and ethical AI
-                  guidelines.
-                </p>
-                <div className="flex flex-wrap gap-4 mb-10">
-                  {["GDPR Compliant", "99.9% Accuracy", "Encrypted Data"].map(
-                    (badge, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"
-                      >
-                        <span className="material-icons text-primary text-sm">
-                          verified
-                        </span>
-                        <span className="text-white text-sm font-bold">
-                          {badge}
-                        </span>
-                      </div>
-                    )
+                  {service.cta && (
+                    <Button variant="primary" size="lg">
+                      {service.cta}
+                    </Button>
                   )}
                 </div>
-                <button className="px-8 py-4 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-100 transition-all">
-                  View Our Ethics Charter
-                </button>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { title: "SOC2", subtitle: "Ready Architecture" },
-                  { title: "ISO", subtitle: "27001 Standard" },
-                  { title: "100%", subtitle: "Ownership" },
-                  { title: "24/7", subtitle: "Monitoring" },
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center"
-                  >
-                    <div className="text-3xl font-extrabold text-white mb-2">
-                      {stat.title}
+                {/* Image Column */}
+                <div className={isEven ? "" : "md:order-1"}>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/5 rounded-3xl rotate-3 scale-105"></div>
+                    <div className="relative rounded-3xl shadow-2xl w-full h-[400px] bg-slate-300 dark:bg-slate-700"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })}
+
+        {/* Websites, Web Portals & Custom Software - CONSOLIDATED SERVICE */}
+        <section className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Left Column - Service Description */}
+            <div>
+              <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <span className="material-icons text-primary text-3xl">
+                  language
+                </span>
+              </div>
+              <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+                Websites, Web Portals & Custom Software
+              </h2>
+              <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-6 tracking-tight">
+                Built to scale. Engineered for performance.
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed">
+                Fast, secure, and conversion-focused digital platforms —
+                designed around your business processes, not templates.
+              </p>
+
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
+                What We Build
+              </h4>
+              <ul className="space-y-4 mb-10">
+                <li className="flex items-center gap-3">
+                  <span className="material-icons text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span className="font-medium">
+                    High-performance business websites
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-icons text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span className="font-medium">
+                    Secure client portals & dashboards
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-icons text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span className="font-medium">
+                    Custom software & system integrations
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-icons text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span className="font-medium">
+                    SaaS & marketplace platforms
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="material-icons text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span className="font-medium">
+                    Role-based access control & security hardening
+                  </span>
+                </li>
+              </ul>
+
+              {/* Image Placeholder */}
+              <div className="relative mb-10">
+                <div className="absolute inset-0 bg-primary/5 rounded-3xl rotate-3 scale-105"></div>
+                <div className="relative rounded-3xl shadow-2xl w-full h-[300px] bg-slate-300 dark:bg-slate-700"></div>
+              </div>
+            </div>
+
+            {/* Right Column - Pricing Guide */}
+            <div>
+              <div className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-8 border border-slate-200 dark:border-slate-800">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <div className="w-8 h-px bg-primary"></div>
+                    <span className="text-primary font-bold uppercase tracking-widest text-xs">
+                      Pricing Guide
+                    </span>
+                    <div className="w-8 h-px bg-primary"></div>
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white mb-3">
+                    Indicative Investment
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm">
+                    Every project is different. The figures below are guides
+                    only and depend on scope, integrations, and complexity.
+                  </p>
+                </div>
+
+                <div className="space-y-6 mb-8">
+                  {softwarePackages.map((pkg, index) => (
+                    <div
+                      key={index}
+                      className={`p-6 rounded-xl border transition-all ${
+                        pkg.highlighted
+                          ? "bg-white dark:bg-slate-800 border-primary shadow-lg shadow-primary/10"
+                          : "bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 hover:border-primary/50"
+                      }`}
+                    >
+                      {pkg.highlighted && (
+                        <div className="inline-block bg-primary text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-3">
+                          Most Popular
+                        </div>
+                      )}
+                      <div className="flex items-baseline justify-between mb-3">
+                        <h4 className="text-lg font-bold text-slate-900 dark:text-white">
+                          {pkg.title}
+                        </h4>
+                        <div className="text-right">
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-xs text-slate-400 font-medium">
+                              from
+                            </span>
+                            <span className="text-2xl font-extrabold text-primary">
+                              {pkg.price}
+                            </span>
+                          </div>
+                          {pkg.description && (
+                            <p className="text-xs text-slate-500 mt-1">
+                              {pkg.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                      <ul className="space-y-2">
+                        {pkg.features.map((feature, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400"
+                          >
+                            <span className="material-icons text-primary text-xs mt-0.5">
+                              done
+                            </span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="text-xs text-slate-400 uppercase tracking-widest font-bold">
-                      {stat.subtitle}
+                  ))}
+                </div>
+
+                {/* Important Note */}
+                <div className="bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-900/30 rounded-xl p-4 mb-6">
+                  <div className="flex items-start gap-3">
+                    <span className="material-icons text-amber-600 dark:text-amber-500 text-sm mt-0.5">
+                      info
+                    </span>
+                    <div>
+                      <h5 className="font-bold text-amber-900 dark:text-amber-200 text-sm mb-1">
+                        Important Note
+                      </h5>
+                      <p className="text-xs text-amber-800 dark:text-amber-300">
+                        We do not offer "one-size-fits-all" development. Final
+                        pricing is confirmed after a technical discovery
+                        session.
+                      </p>
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="space-y-3">
+                  <Button
+                    variant="primary"
+                    className="w-full"
+                    icon="calendar_today"
+                    iconPosition="left"
+                  >
+                    Request a Technical Discovery Call
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    icon="calculate"
+                    iconPosition="left"
+                  >
+                    Get a Project Cost Estimate
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
