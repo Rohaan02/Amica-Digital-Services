@@ -6,8 +6,8 @@ const Navigation = ({ variant = "default", isDark = false }) => {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "How It Works", href: "/#process" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Contact Us", href: "/contact-us" },
   ];
 
   const getNavClass = () => {
@@ -31,7 +31,7 @@ const Navigation = ({ variant = "default", isDark = false }) => {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-8 text-sm font-semibold">
+        <div className="flex items-center space-x-8 text-sm font-semibold">
           {navLinks.map((link) => (
             <Link
               key={link.href}
