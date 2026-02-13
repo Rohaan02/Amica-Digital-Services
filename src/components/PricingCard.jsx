@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const PricingCard = ({
   title,
@@ -59,13 +60,14 @@ const PricingCard = ({
           </div>
         ))}
       </div>
-
-      <Button
-        variant={highlighted ? "primary" : buttonVariant}
-        className="w-full"
-      >
-        {buttonText}
-      </Button>
+      <Link to="/contact-us">
+        <Button
+          variant={highlighted ? "primary" : buttonVariant}
+          className="w-full"
+        >
+          {buttonText}
+        </Button>
+      </Link>
     </div>
   );
 };

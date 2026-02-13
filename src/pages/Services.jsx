@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import SectionHeader from "../components/SectionHeader";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -377,22 +378,26 @@ const Services = () => {
 
                 {/* CTA Buttons */}
                 <div className="space-y-3">
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    icon="calendar_today"
-                    iconPosition="left"
-                  >
-                    Request a Technical Discovery Call
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    icon="calculate"
-                    iconPosition="left"
-                  >
-                    Get a Project Cost Estimate
-                  </Button>
+                  <Link to="/contact-us">
+                    <Button
+                      variant="primary"
+                      className="w-full"
+                      icon="calendar_today"
+                      iconPosition="left"
+                    >
+                      Request a Technical Discovery Call
+                    </Button>
+                  </Link>
+                  <Link to="/contact-us">
+                    <Button
+                      variant="outline"
+                      className="w-full mt-2"
+                      icon="calculate"
+                      iconPosition="left"
+                    >
+                      Get a Project Cost Estimate
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

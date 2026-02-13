@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import PricingCard from "../components/PricingCard";
 import SectionHeader from "../components/SectionHeader";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -119,12 +120,16 @@ const Pricing = () => {
             intelligent digital frameworks.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors shadow-xl">
-              Get Started Today
-            </button>
-            <button className="bg-primary/20 border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/30 transition-colors">
-              Talk to an Expert
-            </button>
+            <Link to="/contact-us">
+              <button className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors shadow-xl">
+                Get Started Today
+              </button>
+            </Link>
+            <Link to="/contact-us">
+              <button className="bg-primary/20 border border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/30 transition-colors">
+                Talk to an Expert
+              </button>
+            </Link>
           </div>
         </div>
       </section>

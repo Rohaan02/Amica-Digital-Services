@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -220,32 +221,17 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="primary">
-                Book a Free AI Growth Consultation
-              </Button>
-              <Button size="lg" variant="secondary">
-                Explore Our Services
-              </Button>
+              <Link to="/contact-us">
+                <Button size="lg" variant="primary">
+                  Book a Free AI Growth Consultation
+                </Button>
+              </Link>
+              <a href="#services">
+                <Button size="lg" variant="secondary">
+                  Explore Our Services
+                </Button>
+              </a>
             </div>
-
-            {/* <div className="flex items-center space-x-6 pt-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full border-2 border-background-dark bg-slate-300"
-                  ></div>
-                ))}
-              </div>
-              <div className="text-sm">
-                <p className="font-bold text-slate-900 dark:text-white">
-                  Trusted by 250+ Companies
-                </p>
-                <p className="text-slate-500">
-                  Average 4.9/5 satisfaction rate
-                </p>
-              </div>
-            </div> */}
           </div>
 
           <div className="relative hidden lg:block">
@@ -310,9 +296,11 @@ const Home = () => {
         </div>
 
         <div className="mt-12 w-full flex justify-center">
-          <Button variant="ghost" icon="arrow_forward">
-            See All Services
-          </Button>
+          <Link to="/services">
+            <Button variant="ghost" icon="arrow_forward">
+              See All Services
+            </Button>
+          </Link>
         </div>
       </section>
 
@@ -344,9 +332,11 @@ const Home = () => {
               ))}
             </div>
             <div className="mt-12 w-full flex justify-center">
-              <Button variant="primary" icon="arrow_forward">
-                Start Your 30-Day Launch
-              </Button>
+              <Link to="/contact-us">
+                <Button variant="primary" icon="arrow_forward">
+                  Start Your 30-Day Launch
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -375,9 +365,11 @@ const Home = () => {
               </div>
 
               <div className="mt-12">
-                <Button variant="ghost" icon="arrow_forward">
-                  Talk to an AI Growth Expert
-                </Button>
+                <Link to="/contact-us">
+                  <Button variant="ghost" icon="arrow_forward">
+                    Talk to an AI Growth Expert
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -418,25 +410,15 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Button
-                  size="xl"
-                  variant="secondary"
-                  className="bg-white text-primary hover:bg-slate-100"
-                >
-                  Book Your Free Strategy Call
-                </Button>
-                {/* <div className="text-left">
-                  <div className="flex items-center text-white mb-1">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <span key={i} className="material-icons text-amber-400">
-                        star
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-white/70 text-sm font-medium">
-                    Limited spots available for Q3 2026
-                  </p>
-                </div> */}
+                <Link to="/contact-us">
+                  <Button
+                    size="xl"
+                    variant="secondary"
+                    className="bg-white text-primary hover:bg-slate-100"
+                  >
+                    Book Your Free Strategy Call
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

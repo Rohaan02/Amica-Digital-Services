@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
 import SectionHeader from "../components/SectionHeader";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const philosophyPoints = [
@@ -235,18 +236,11 @@ const About = () => {
                 and AI into one intelligent system that drives real growth.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className="bg-white text-primary hover:bg-slate-100"
-                  icon="people"
-                  iconPosition="left"
-                >
-                  Meet With Our Team
-                </Button>
-                <button className="px-10 py-5 bg-navy-deep/30 text-white font-extrabold rounded-xl border border-white/20 hover:bg-navy-deep/50 transition-colors">
-                  View Our Services
-                </button>
+                <Link to="/services">
+                  <button className="px-10 py-5 bg-navy-deep/30 text-white font-extrabold rounded-xl border border-white/20 hover:bg-navy-deep/50 transition-colors">
+                    View Our Services
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
