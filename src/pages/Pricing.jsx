@@ -8,49 +8,53 @@ const Pricing = () => {
   const pricingPlans = [
     {
       title: "Foundation",
-      description: "Ideal for startups finding their digital footing.",
+      description: "For businesses starting digital growth",
       price: "£199",
       setupFee: "£290",
       features: [
-        "Basic AI Automations",
-        "1 Platform Integration",
-        "Monthly Performance Report",
-        "Email Support",
+        "Website (one page) or landing page",
+        "Basic SEO setup",
+        "Google Business Profile optimisation",
+        "Analytics & tracking",
+        "Consent & compliance tools",
       ],
-      buttonText: "Start Foundation",
+      buttonText: "Get Started",
       buttonVariant: "outline",
     },
     {
       title: "Growth Engine",
-      description: "For businesses ready to dominate their market.",
+      description: "For businesses that want leads & momentum",
       price: "£299",
       setupFee: "£990",
       features: [
-        "Everything in Foundation",
-        "Advanced CRM Integration",
-        "AI Lead Generation Engine",
-        "Multi-channel Marketing Sync",
-        "Live Dashboard Access",
-        "Weekly Optimization Calls",
+        "Everything in Foundation, plus:",
+        "AI-assisted lead generation",
+        "CRM & pipeline automation",
+        "SEO content framework",
+        "Social media systems",
+        "Automated follow-ups",
+        "Monthly reporting",
       ],
       highlighted: true,
       badgeText: "Most Popular",
-      buttonText: "Get Growth Now",
+      buttonText: "Scale My Business",
       buttonVariant: "primary",
     },
     {
-      title: "AI Automation",
-      description: "Enterprise-grade AI infrastructure & strategy.",
+      title: "AI Automation & Compliance",
+      description:
+        "For healthcare, law firms and recruitment agencies — regulated & scaling businesses",
       price: "£490",
       setupFee: "£1,950",
       features: [
-        "Custom AI Agent Development",
-        "Full Workflow Engineering",
-        "Dedicated Account Manager",
-        "Priority 24/7 Technical Support",
-        "Unlimited Data Processing",
+        "Everything in Growth Engine, plus:",
+        "AI virtual assistants & agents",
+        "Advanced automation workflows",
+        "AI governance & usage policy",
+        "Security & access controls",
+        "Priority support & strategy reviews",
       ],
-      buttonText: "Go Enterprise",
+      buttonText: "Book AI Strategy Call",
       buttonVariant: "outline",
     },
   ];
@@ -78,7 +82,7 @@ const Pricing = () => {
                 <span className="text-primary">Scalable Growth.</span>
               </>
             }
-            description="Choose the perfect engine for your digital transformation. No hidden fees, just pure AI-driven performance."
+            description="Choose the level that fits your ambition."
           />
         </div>
       </header>
