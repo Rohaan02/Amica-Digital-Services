@@ -7,28 +7,28 @@ import SectionHeader from "../components/SectionHeader";
 const About = () => {
   const philosophyPoints = [
     {
-      icon: "settings_suggest",
-      title: "Operational First",
-      description:
-        "We analyze your workflows before writing a single line of code, ensuring technology fits your business—not the other way around.",
-    },
-    {
       icon: "psychology",
-      title: "AI Integration",
+      title: "AI should enhance, not replace humans",
       description:
-        "We treat AI as a core utility, focusing on practical automation that solves real-world bottlenecks in your daily operations.",
+        "We believe AI is a tool to amplify human capability, not eliminate it. Our solutions are designed to empower your team.",
     },
     {
-      icon: "layers",
-      title: "Scalable Architecture",
+      icon: "settings_suggest",
+      title: "Automation should save time, not create chaos",
       description:
-        "Every solution is built with tomorrow in mind. We create elastic digital environments that grow as your company expands.",
+        "Smart automation removes friction and repetitive work, giving you more time to focus on what matters most.",
+    },
+    {
+      icon: "trending_up",
+      title: "Marketing should convert, not just impress",
+      description:
+        "Beautiful campaigns mean nothing without results. We build strategies that drive measurable growth and revenue.",
     },
     {
       icon: "verified_user",
-      title: "Data Integrity",
+      title: "Compliance should be built-in, not bolted on",
       description:
-        "Security and accuracy are non-negotiable. We maintain rigorous standards to protect your most valuable digital assets.",
+        "Security and compliance aren't afterthoughts. We architect them into the foundation of every solution.",
     },
   ];
 
@@ -36,21 +36,40 @@ const About = () => {
     {
       icon: "medical_services",
       label: "Healthcare",
-      description:
-        "Navigating HIPAA compliance and complex patient data workflows with ease.",
+      description: "Care services and clinical operations",
     },
     {
       icon: "gavel",
-      label: "Law",
-      description:
-        "Streamlining discovery and document management through AI-powered automation.",
+      label: "Law Firms",
+      description: "Legal practice management and compliance",
     },
     {
       icon: "cloud_done",
-      label: "SaaS",
-      description:
-        "Building and scaling product infrastructure for the next generation of software leaders.",
+      label: "SaaS Platforms",
+      description: "Software product development and scaling",
     },
+    {
+      icon: "people",
+      label: "Recruitment Agencies",
+      description: "Talent acquisition and management systems",
+    },
+    {
+      icon: "restaurant",
+      label: "Food Chains",
+      description: "Multi-location restaurant operations",
+    },
+    {
+      icon: "public",
+      label: "International Markets",
+      description: "Multi-country operations and compliance",
+    },
+  ];
+
+  const understandingPoints = [
+    "Regulated environments",
+    "High-trust industries",
+    "Multi-country operations",
+    "Scaling without losing control",
   ];
 
   return (
@@ -62,26 +81,23 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative z-10">
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
-              Operational Excellence
+              About Amica Digital Services
             </span>
             <h1 className="text-5xl lg:text-6xl font-extrabold text-navy-deep dark:text-white leading-[1.1] mb-8">
               Built for the <span className="text-primary">AI-first</span>{" "}
-              future.
+              future
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-xl">
-              Amica was founded by operational experts who believe that
-              technology should be an accelerator, not a hurdle. We bridge the
-              gap between complex business logic and cutting-edge digital
-              implementation.
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed max-w-xl">
+              Amica Digital Services was created to solve a growing problem:
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button variant="primary" size="lg" icon="arrow_forward">
-                Learn Our Process
-              </Button>
-              <Button variant="secondary" size="lg">
-                View Services
-              </Button>
-            </div>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-xl font-semibold">
+              Businesses are buying more tools, more software, more marketing —
+              but getting less clarity, less control, and less real growth.
+            </p>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-xl">
+              We bridge strategy, technology, AI, and execution into one
+              intelligent system.
+            </p>
           </div>
 
           <div className="relative">
@@ -110,11 +126,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             title="Our Philosophy"
-            description="We don't just build software; we architect the operational backbone of your future organization."
+            description="The principles that guide everything we build."
             className="mb-20"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {philosophyPoints.map((point, index) => (
               <div
                 key={index}
@@ -135,7 +151,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Background & Industries */}
+      {/* Our Background */}
       <section className="py-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -154,31 +170,27 @@ const About = () => {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl lg:text-4xl font-extrabold text-navy-deep dark:text-white mb-6">
-                Built on Proven Experience
+                Our Background
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                Our founders didn't start in a garage; they started in the
-                high-stakes corridors of regulated industries. This operational
-                DNA is what makes Amica different. We understand the nuances of
-                compliance, the criticality of uptime, and the necessity of
-                precision.
+                Our leadership comes from real operational businesses —
+                healthcare, care services, SaaS platforms, law firms,
+                recruitment agencies, food chains, and international markets.
               </p>
-              <div className="space-y-6">
-                {industries.map((industry, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                      <span className="material-icons text-primary">
-                        {industry.icon}
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-navy-deep dark:text-white">
-                        {industry.label}
-                      </h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">
-                        {industry.description}
-                      </p>
-                    </div>
+
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
+                We understand:
+              </h3>
+
+              <div className="space-y-4 mb-8">
+                {understandingPoints.map((point, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <span className="material-icons text-primary text-sm">
+                      check_circle
+                    </span>
+                    <span className="font-semibold text-slate-700 dark:text-slate-300">
+                      {point}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -196,11 +208,13 @@ const About = () => {
           <span className="material-icons text-primary text-5xl mb-8">
             format_quote
           </span>
-          <h2 className="text-3xl lg:text-5xl font-extrabold leading-tight mb-10 italic">
-            "Our mission is to bridge the gap between legacy operations and
-            future technology by delivering AI-driven solutions that are as
-            reliable as they are revolutionary."
+          <h2 className="text-xl font-bold uppercase tracking-widest text-primary mb-6">
+            Our Mission
           </h2>
+          <p className="text-3xl lg:text-5xl font-extrabold leading-tight mb-10">
+            To help businesses grow smarter, faster, and more responsibly using
+            AI-driven digital systems.
+          </p>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
       </section>
@@ -214,19 +228,24 @@ const About = () => {
             </div>
             <div className="relative z-10 max-w-2xl">
               <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">
-                Ready to transform your operations?
+                Ready to work with us?
               </h2>
               <p className="text-xl text-white/80 mb-10">
-                Join dozens of companies that have scaled their digital
-                capabilities with Amica's operational-first approach. Let's
-                build your AI-first future together.
+                Let's discuss how we can help you bridge strategy, technology,
+                and AI into one intelligent system that drives real growth.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="px-10 py-5 bg-white text-primary font-extrabold rounded-xl hover:bg-slate-100 transition-colors shadow-lg">
+                <Button
+                  variant="secondary"
+                  size="xl"
+                  className="bg-white text-primary hover:bg-slate-100"
+                  icon="people"
+                  iconPosition="left"
+                >
                   Meet With Our Team
-                </button>
+                </Button>
                 <button className="px-10 py-5 bg-navy-deep/30 text-white font-extrabold rounded-xl border border-white/20 hover:bg-navy-deep/50 transition-colors">
-                  Contact Us
+                  View Our Services
                 </button>
               </div>
             </div>
