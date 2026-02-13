@@ -92,16 +92,20 @@ const Footer = () => {
           </h4>
           <ul className="space-y-4 text-sm text-slate-500">
             <li className="flex items-start space-x-3">
-              <span className="material-icons text-xs mt-1 text-primary">
-                email
-              </span>
-              <span>growth@amica.digital</span>
+              <a href="mailto:rohaannadeem2@gmail.com" className="space-x-3">
+                <span className="material-icons text-xs mt-1 text-primary">
+                  email
+                </span>
+                <span>growth@amica.digital</span>
+              </a>
             </li>
-            <li className="flex items-start space-x-3">
-              <span className="material-icons text-xs mt-1 text-primary">
-                phone
-              </span>
-              <span>+44 7808 014132</span>
+            <li className="flex items-start">
+              <a href="tel:+447808014132" className="space-x-3">
+                <span className="material-icons text-xs mt-1 text-primary">
+                  phone
+                </span>
+                <span>+44 7808 014132</span>
+              </a>
             </li>
             <li className="flex items-start space-x-3">
               <span className="material-icons text-xs mt-1 text-primary">
