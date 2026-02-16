@@ -493,14 +493,16 @@ const ServiceDetail = () => {
               {service.description}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary" size="xl">
-                {service.primaryCTA}
-              </Button>
-              {service.secondaryCTA && (
-                <Button variant="secondary" size="xl">
-                  {service.secondaryCTA}
+              <Link to="/contact-us">
+                <Button variant="primary" size="xl">
+                  {service.primaryCTA}
                 </Button>
-              )}
+                {service.secondaryCTA && (
+                  <Button variant="secondary" size="xl">
+                    {service.secondaryCTA}
+                  </Button>
+                )}
+              </Link>
             </div>
           </div>
 
