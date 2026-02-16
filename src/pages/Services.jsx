@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const services = [
     {
+      slug: "ai-lead-generation",
       icon: "trending_up",
       title: "AI Lead Generation & Growth Marketing",
       description: "Leads that convert — not just traffic.",
@@ -23,6 +24,7 @@ const Services = () => {
       cta: "Get More Qualified Leads",
     },
     {
+      slug: "ai-automation",
       icon: "settings_suggest",
       title: "AI Automation & CRM Systems",
       description: "Automate the work your team shouldn't be doing.",
@@ -38,6 +40,7 @@ const Services = () => {
       cta: "Automate My Business",
     },
     {
+      slug: "ai-virtual-assistants",
       icon: "smart_toy",
       title: "AI Virtual Assistants & AI Agents",
       description: "24/7 intelligent digital staff.",
@@ -54,6 +57,7 @@ const Services = () => {
       cta: "Deploy an AI Assistant",
     },
     {
+      slug: "seo-content-social",
       icon: "search",
       title: "SEO, Content & Social Media Systems",
       description: "Visibility that compounds.",
@@ -69,6 +73,7 @@ const Services = () => {
       cta: "Grow My Online Presence",
     },
     {
+      slug: "responsible-ai-compliance",
       icon: "verified_user",
       title: "Responsible AI & Digital Compliance",
       description: "AI done right.",
@@ -193,9 +198,11 @@ const Services = () => {
                   )}
 
                   {service.cta && (
-                    <Button variant="primary" size="lg">
-                      {service.cta}
-                    </Button>
+                    <Link to={`/services/${service.slug}`}>
+                      <Button variant="primary" size="lg">
+                        {service.cta}
+                      </Button>
+                    </Link>
                   )}
                 </div>
 

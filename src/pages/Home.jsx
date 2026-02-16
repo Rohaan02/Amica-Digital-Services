@@ -12,6 +12,7 @@ import SectionHeader from "../components/SectionHeader";
 const Home = () => {
   const services = [
     {
+      slug: "ai-lead-generation",
       icon: "rocket_launch",
       iconColor: "text-primary",
       title: "AI Lead Generation",
@@ -21,6 +22,7 @@ const Home = () => {
       featureIconColor: "text-primary",
     },
     {
+      slug: "ai-automation",
       icon: "storage",
       iconColor: "text-accent-indigo",
       title: "Intelligent CRM",
@@ -30,6 +32,7 @@ const Home = () => {
       featureIconColor: "text-accent-indigo",
     },
     {
+      slug: "ai-virtual-assistants",
       icon: "smart_toy",
       iconColor: "text-accent-emerald",
       title: "AI Virtual Assistants",
@@ -39,6 +42,7 @@ const Home = () => {
       featureIconColor: "text-accent-emerald",
     },
     {
+      slug: "seo-content-social",
       icon: "search",
       iconColor: "text-amber-500",
       title: "Next-Gen SEO",
@@ -48,6 +52,7 @@ const Home = () => {
       featureIconColor: "text-amber-500",
     },
     {
+      slug: "websites-custom-software",
       icon: "code",
       iconColor: "text-rose-500",
       title: "Web & Custom Software",
@@ -57,6 +62,7 @@ const Home = () => {
       featureIconColor: "text-rose-500",
     },
     {
+      slug: "responsible-ai-compliance",
       icon: "security",
       iconColor: "text-slate-500",
       title: "Responsible AI",
@@ -290,7 +296,7 @@ const Home = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <ServiceCard key={index} {...service} slug={service.slug} />
             ))}
           </div>
         </div>
