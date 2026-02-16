@@ -82,7 +82,7 @@ const ServiceDetail = () => {
         ],
       },
       primaryCTA: "Get More Qualified Leads",
-      secondaryCTA: "Schedule a Strategy Call",
+      //   secondaryCTA: "Schedule a Strategy Call",
     },
 
     "ai-automation": {
@@ -156,7 +156,7 @@ const ServiceDetail = () => {
         ],
       },
       primaryCTA: "Automate My Business",
-      secondaryCTA: "Book a Discovery Call",
+      //   secondaryCTA: "Book a Discovery Call",
     },
 
     "ai-virtual-assistants": {
@@ -232,7 +232,7 @@ const ServiceDetail = () => {
       },
       additionalNote: "Ethical. Transparent. Controlled.",
       primaryCTA: "Deploy an AI Assistant",
-      secondaryCTA: "View Demo",
+      //   secondaryCTA: "View Demo",
     },
 
     "websites-custom-software": {
@@ -397,7 +397,7 @@ const ServiceDetail = () => {
         ],
       },
       primaryCTA: "Grow My Online Presence",
-      secondaryCTA: "Get SEO Audit",
+      //   secondaryCTA: "Get SEO Audit",
     },
 
     "responsible-ai-compliance": {
@@ -443,10 +443,9 @@ const ServiceDetail = () => {
             "Implementation frameworks that prioritize fairness, transparency, and accountability.",
         },
       ],
-      additionalNote:
-        "Guidance, not legal certification. We provide best-practice recommendations and implementation support, but do not offer legal advice or certification services.",
+      additionalNote: "Guidance, not legal certification.",
       primaryCTA: "Discuss Compliance & AI",
-      secondaryCTA: "Schedule Consultation",
+      //   secondaryCTA: "Schedule Consultation",
     },
   };
 
@@ -555,44 +554,6 @@ const ServiceDetail = () => {
             </div>
           </div>
         </section>
-
-        {/* How it Works (Optional) */}
-        {service.workflow && (
-          <section className="py-24 bg-slate-50 dark:bg-background-dark">
-            <div className="max-w-7xl mx-auto px-6">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
-                  How it Works
-                </h2>
-                <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-                  {service.workflow.description}
-                </p>
-              </div>
-              <div className="relative">
-                {/* Connection Line (Desktop) */}
-                <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-primary/20 -translate-y-1/2"></div>
-                <div className="grid lg:grid-cols-4 gap-8 relative z-10">
-                  {service.workflow.steps.map((step, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col items-center text-center"
-                    >
-                      <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary/30 border-4 border-white dark:border-slate-900">
-                        <span className="material-icons">{step.icon}</span>
-                      </div>
-                      <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-400">
-                        {step.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* Pricing Section (Optional - for websites service) */}
         {service.pricingPackages && (
@@ -705,55 +666,6 @@ const ServiceDetail = () => {
             </div>
           </section>
         )}
-
-        {/* Dynamic CTA Section */}
-        <section className="max-w-5xl mx-auto px-6 py-24">
-          <div className="bg-slate-900 dark:bg-slate-800 rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
-            {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
-
-            <div className="relative z-10">
-              <h2 className="text-3xl lg:text-5xl font-extrabold text-white mb-6">
-                Ready to get started?
-              </h2>
-              <p className="text-slate-400 text-lg lg:text-xl mb-12 max-w-2xl mx-auto">
-                Join 200+ businesses using our AI frameworks to transform their
-                digital growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button
-                  variant="secondary"
-                  size="xl"
-                  className="bg-primary text-white hover:bg-primary/90"
-                >
-                  {service.primaryCTA}
-                </Button>
-                {service.secondaryCTA && (
-                  <Button
-                    variant="ghost"
-                    size="xl"
-                    className="bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm"
-                  >
-                    {service.secondaryCTA}
-                  </Button>
-                )}
-              </div>
-
-              <div className="mt-12 flex items-center justify-center gap-4 text-slate-400 text-sm">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full border-2 border-slate-900 bg-slate-600"
-                    ></div>
-                  ))}
-                </div>
-                <span>Trusted by 500+ professionals</span>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
