@@ -6,19 +6,34 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { label: "Lead Generation", href: "/services#lead-gen" },
-        { label: "CRM Systems", href: "/services#crm" },
-        { label: "AI Assistants", href: "/services#assistants" },
-        { label: "Custom Websites", href: "/services#custom-websites" },
+        { label: "AI Lead Generation", href: "/services/ai-lead-generation" },
+        { label: "AI Automation & CRM", href: "/services/ai-automation" },
+        {
+          label: "AI Virtual Assistants",
+          href: "/services/ai-virtual-assistants",
+        },
+        {
+          label: "SEO & Content Systems",
+          href: "/services/seo-content-social",
+        },
+        {
+          label: "Web & Custom Software",
+          href: "/services/websites-custom-software",
+        },
+        {
+          label: "Responsible AI & Compliance",
+          href: "/services/responsible-ai-compliance",
+        },
       ],
     },
     {
-      title: "Company",
+      title: "Pages",
       links: [
+        { label: "Home", href: "/" },
         { label: "About Us", href: "/about" },
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Careers", href: "/careers" },
-        { label: "Privacy Policy", href: "/privacy" },
+        { label: "Services", href: "/services" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Contact Us", href: "/contact-us" },
       ],
     },
   ];
