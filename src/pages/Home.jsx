@@ -10,6 +10,10 @@ import IndustryIcon from "../components/IndustryIcon";
 import SectionHeader from "../components/SectionHeader";
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [serviceSlide, setServiceSlide] = useState(0);
+
   const services = [
     {
       slug: "ai-lead-generation",
@@ -72,6 +76,22 @@ const Home = () => {
       featureIconColor: "text-slate-500",
     },
   ];
+
+  // Group services into rows of 3 for desktop
+  const getVisibleServices = () => {
+    const startIndex = serviceSlide * 3;
+    return services.slice(startIndex, startIndex + 3);
+  };
+
+  const totalSlides = Math.ceil(services.length / 3);
+
+  const nextServiceSlide = () => {
+    setServiceSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevServiceSlide = () => {
+    setServiceSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
   const whyChooseUs = [
     {
@@ -144,9 +164,6 @@ const Home = () => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-
   const slides = [
     "Amica Digital Services helps ambitious businesses grow using AI-driven marketing systems, intelligent automation, and next-generation digital infrastructure.",
     "We don't just market your business — we install scalable growth engines powered by AI.",
@@ -171,6 +188,8 @@ const Home = () => {
     { icon: "spa", label: "Clinics & Wellness" },
     { icon: "computer", label: "SaaS & Marketplaces" },
   ];
+
+  const visibleServices = getVisibleServices();
 
   return (
     <div className="bg-background-light dark:bg-background-dark">
@@ -272,7 +291,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Core Capabilities */}
+      {/* Core Capabilities with Slider */}
       <section
         className="py-24 bg-background-light dark:bg-background-dark"
         id="services"
@@ -284,17 +303,67 @@ const Home = () => {
               title="Core Capabilities"
               description="Our suite of intelligent services designed to automate every touchpoint of your customer journey."
             />
-            <div className="flex space-x-2">
-              <button className="w-12 h-12 rounded-full border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <span className="material-icons">chevron_left</span>
-              </button>
-              <button className="w-12 h-12 rounded-full border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <span className="material-icons">chevron_right</span>
-              </button>
+            <div className="flex items-center gap-4">
+              {/* Slide Indicators */}
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalSlides }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setServiceSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === serviceSlide
+                        ? "w-6 bg-primary"
+                        : "bg-slate-300 dark:bg-slate-600 hover:bg-primary/50"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <div className="flex space-x-2">
+                <button
+                  onClick={prevServiceSlide}
+                  className="w-12 h-12 rounded-full border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={totalSlides <= 1}
+                  aria-label="Previous services"
+                >
+                  <span className="material-icons">chevron_left</span>
+                </button>
+                <button
+                  onClick={nextServiceSlide}
+                  className="w-12 h-12 rounded-full border border-slate-200 dark:border-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={totalSlides <= 1}
+                  aria-label="Next services"
+                >
+                  <span className="material-icons">chevron_right</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Services Grid with Animation */}
+          <div className="relative overflow-hidden">
+            <div
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 ease-in-out"
+              key={serviceSlide} // This forces re-render with animation
+            >
+              {visibleServices.map((service, index) => (
+                <div
+                  key={service.slug}
+                  className="animate-fadeIn"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+                  <ServiceCard {...service} slug={service.slug} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile View - Show all services stacked */}
+          <div className="lg:hidden grid md:grid-cols-2 gap-8 mt-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} slug={service.slug} />
             ))}
@@ -432,6 +501,23 @@ const Home = () => {
       </section>
 
       <Footer />
+
+      {/* Add animation styles */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
