@@ -153,9 +153,45 @@ const IntakeForm = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 px-2">
-              <div className="h-6 w-16 bg-slate-300 dark:bg-slate-700 rounded opacity-40"></div>
-              <div className="h-6 w-16 bg-slate-300 dark:bg-slate-700 rounded opacity-40"></div>
+            {/* Contact Information */}
+            <div className="p-6 bg-white dark:bg-white/5 rounded-xl border border-primary/10">
+              <h4 className="font-bold mb-4 text-slate-900 dark:text-white">
+                Contact Us
+              </h4>
+              <ul className="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                <li className="flex items-center space-x-3">
+                  <span className="material-icons text-sm text-primary">
+                    email
+                  </span>
+                  <a
+                    href="mailto:growth@amica.digital"
+                    className="hover:text-primary transition-colors"
+                  >
+                    growth@amica.digital
+                  </a>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <span className="material-icons text-sm text-primary">
+                    phone
+                  </span>
+                  <a
+                    href="tel:+447808014132"
+                    className="hover:text-primary transition-colors"
+                  >
+                    +44 7808 014132
+                  </a>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="material-icons text-sm text-primary">
+                    location_on
+                  </span>
+                  <span>
+                    378 Claremont Road, Manchester
+                    <br />
+                    M14 7WB
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
 
