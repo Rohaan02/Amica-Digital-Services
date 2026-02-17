@@ -18,6 +18,7 @@ const Navigation = ({ variant = "default", isDark = false }) => {
       hasDropdown: true,
     },
     { label: "Pricing", href: "/pricing" },
+    { label: "Case Study", href: "/rsm-case-study" },
     { label: "Contact Us", href: "/contact-us" },
   ];
 

@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import IntakeForm from "./pages/IntakeForm";
+import RSMCaseStudy from "./pages/CaseStudy";
 import ServiceDetail from "./components/ServiceDetail";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/rsm-case-study" element={<RSMCaseStudy />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<IntakeForm />} />
       </Routes>
