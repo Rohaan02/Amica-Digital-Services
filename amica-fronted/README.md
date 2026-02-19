@@ -28,3 +28,5 @@ Clone the repository:
 git clone https://github.com/Rohaan02/Amica-Digital-Services
 cd Amica-Digital-Services
 ```
+
+set frontend in the sepearate directory.
