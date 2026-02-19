@@ -1,15 +1,23 @@
 import { transporter } from "../config/mailer.js";
 
-export const sendEmail = async ({ name, email, message }) => {
+export const sendEmail = async (formData) => {
+  const formattedData = Object.entries(formData)
+    .map(([key, value]) => {
+      if (Array.isArray(value)) {
+        return `<p><b>${key}:</b> ${value.join(", ")}</p>`;
+      }
+      return `<p><b>${key}:</b> ${value}</p>`;
+    })
+    .join("");
+
   return await transporter.sendMail({
-    from: process.env.EMAIL_USER,
+    from: `"Amica Website" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_TO,
-    subject: "New Contact Message - Amica",
+    replyTo: formData.email,
+    subject: "New Amica Smart Intake Submission",
     html: `
-      <h3>New Message</h3>
-      <p><b>Name:</b> ${name}</p>
-      <p><b>Email:</b> ${email}</p>
-      <p><b>Message:</b> ${message}</p>
+      <h2>New Intake Form Submission</h2>
+      ${formattedData}
     `,
   });
 };
