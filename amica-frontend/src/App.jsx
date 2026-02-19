@@ -7,10 +7,12 @@ import About from "./pages/About";
 import IntakeForm from "./pages/IntakeForm";
 import RSMCaseStudy from "./pages/CaseStudy";
 import ServiceDetail from "./components/ServiceDetail";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
   return (
     <Router>
+      <FloatingWhatsApp />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
