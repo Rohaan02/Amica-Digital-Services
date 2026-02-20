@@ -226,7 +226,7 @@ const ServiceDetail = () => {
 
     "seo-content-social": {
       serviceName: "SEO & Content Systems",
-      badge: "Organic Growth",
+      badge: "SEO & Content Systems",
       tagline: (
         <>
           Visibility That{" "}
@@ -238,31 +238,34 @@ const ServiceDetail = () => {
       heroImage: null,
       features: [
         {
-          icon: "search",
+          icon: "insights",
           title: "Identify high-value search opportunities",
           description:
-            "Find keywords your competitors are missing that drive real business.",
+            "Uncover high-intent keywords and untapped search gaps that attract qualified traffic ready to convert.",
         },
         {
-          icon: "web",
+          icon: "web_asset",
           title: "Build conversion-focused landing pages",
           description:
-            "Pages designed to rank and convert visitors into customers.",
+            "Design and optimise landing pages that rank well and guide visitors toward clear, measurable actions.",
         },
         {
-          icon: "article",
+          icon: "verified",
           title: "Develop trust-building content",
-          description: "Establish authority and credibility in your industry.",
+          description:
+            "Create authoritative, value-driven content that strengthens credibility and nurtures long-term trust.",
         },
         {
-          icon: "speed",
+          icon: "bolt",
           title: "Optimise technical performance",
-          description: "Fast, mobile-friendly sites that search engines love.",
+          description:
+            "Improve site speed, mobile responsiveness, and core technical SEO to maximise search visibility.",
         },
         {
-          icon: "analytics",
+          icon: "monitoring",
           title: "Track ranking and engagement impact",
-          description: "Measure exactly what's working and what's not.",
+          description:
+            "Monitor keyword rankings, user behaviour, and conversion metrics to continuously refine performance.",
         },
       ],
       forWhom: [
