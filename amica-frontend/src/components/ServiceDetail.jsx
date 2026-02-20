@@ -292,10 +292,11 @@ const ServiceDetail = () => {
 
     "websites-custom-software": {
       serviceName: "Web & Custom Software",
-      badge: "Built to Scale",
+      badge: "Web & Custom Software",
       tagline: (
         <>
-          Engineered for <span className="text-primary">Performance</span>
+          Built to Scale -
+          <span className="text-primary">Engineered for Performance</span>
         </>
       ),
       description:
@@ -303,34 +304,40 @@ const ServiceDetail = () => {
       heroImage: null,
       features: [
         {
-          icon: "web",
+          icon: "public",
           title: "High-performance business websites",
           description:
-            "Fast, conversion-focused sites that turn visitors into customers.",
+            "Optimised, responsive websites built for speed, SEO, and high conversion performance.",
         },
         {
-          icon: "lock",
+          icon: "vpn_key",
           title: "Secure client portals",
           description:
-            "Protected access for clients to view documents, data, and resources.",
+            "Encrypted, access-controlled portals where clients can securely manage documents and communications.",
         },
         {
-          icon: "dashboard",
+          icon: "insights",
           title: "Staff dashboards",
           description:
-            "Internal tools that give your team visibility and control.",
+            "Custom internal dashboards providing real-time data, reporting, and operational oversight.",
         },
         {
-          icon: "code",
+          icon: "integration_instructions",
           title: "Custom software tools",
           description:
-            "Bespoke solutions built around your unique business processes.",
+            "Tailor-made applications designed to automate and enhance your specific business workflows.",
         },
         {
-          icon: "cloud_done",
-          title: "SaaS & Marketplace systems",
+          icon: "cloud",
+          title: "SaaS architecture support",
           description:
-            "Scalable platforms with payments, user management, and more.",
+            "Scalable cloud-based systems with user authentication, subscription billing, and performance optimisation.",
+        },
+        {
+          icon: "storefront",
+          title: "Marketplace systems",
+          description:
+            "Multi-vendor platforms with product listings, payment processing, and user management capabilities.",
         },
       ],
       builtWith: {
