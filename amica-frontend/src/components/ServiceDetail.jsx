@@ -397,45 +397,55 @@ const ServiceDetail = () => {
 
     "responsible-ai-compliance": {
       serviceName: "Responsible AI & Compliance",
-      badge: "Ethical AI",
+      badge: "Responsible AI & Compliance",
       tagline: (
         <>
-          AI Done <span className="text-primary">Properly</span> – Not
-          Recklessly
+          AI Done Properly –{" "}
+          <span className="text-primary">Not Recklessly</span>
         </>
       ),
-      description:
-        "2026 UK businesses face: Data sensitivity. Compliance pressure. AI misuse risks. Reputational damage concerns. We help organisations adopt AI responsibly.",
+      description: (
+        <>
+          2026 UK businesses face:
+          <li>Data sensitivity.</li>
+          <li>Compliance pressure.</li>
+          <li>AI misuse risks.</li>
+          <li>Reputational damage concerns.</li>
+          <br />
+          We help organisations adopt AI responsibly.
+        </>
+      ),
       heroImage: null,
       features: [
         {
-          icon: "policy",
+          icon: "architecture",
           title: "AI usage frameworks",
           description:
-            "Clear policies on when and how to deploy AI in your business.",
+            "Structured governance models that define responsible AI implementation, risk boundaries, and accountability.",
         },
         {
-          icon: "security",
+          icon: "shield",
           title: "Data handling best practice guidance",
           description:
-            "Protect customer and staff information with proper protocols.",
+            "Establish secure data collection, storage, and processing standards aligned with compliance requirements.",
         },
         {
-          icon: "verified_user",
+          icon: "privacy_tip",
           title: "Consent-aware automation",
           description:
-            "Systems that respect user preferences and privacy choices.",
+            "Design workflows that automatically respect user consent, opt-ins, and privacy regulations.",
         },
         {
-          icon: "admin_panel_settings",
+          icon: "manage_accounts",
           title: "Role-based system controls",
-          description: "Granular permissions ensure only authorized access.",
+          description:
+            "Implement tiered access permissions to ensure users only access what their role requires.",
         },
         {
-          icon: "support_agent",
+          icon: "gavel",
           title: "Human override safeguards",
           description:
-            "Always maintain human decision-making where it matters.",
+            "Embed escalation paths and manual review checkpoints for critical or sensitive decisions.",
         },
       ],
       additionalNote:
