@@ -11,7 +11,7 @@ const ServiceDetail = () => {
   const servicesData = {
     "ai-lead-generation": {
       serviceName: "AI Lead Generation & Growth Marketing",
-      badge: "Intelligent Growth",
+      badge: "AI Lead Generation & Growth Marketing",
       tagline: (
         <>
           Leads That <span className="text-primary">Convert</span> – Not Just
@@ -167,7 +167,7 @@ const ServiceDetail = () => {
 
     "ai-virtual-assistants": {
       serviceName: "AI Virtual Assistants & Intelligent Agents",
-      badge: "24/7 Intelligence",
+      badge: "AI Virtual Assistants & Intelligent Agents",
       tagline: (
         <>
           24/7 Digital Staff That{" "}
@@ -179,32 +179,34 @@ const ServiceDetail = () => {
       heroImage: null,
       features: [
         {
-          icon: "chat",
+          icon: "question_answer",
           title: "Answer FAQs instantly",
-          description: "Provide immediate responses to common questions 24/7.",
+          description:
+            "Deliver accurate, real-time responses to common questions around the clock without human intervention.",
         },
         {
-          icon: "person_search",
+          icon: "fact_check",
           title: "Pre-qualify patients or job candidates",
           description:
-            "Filter and assess prospects before they reach your team.",
+            "Automatically assess eligibility, capture key information, and filter applicants before passing them to your team.",
         },
         {
-          icon: "description",
+          icon: "folder_open",
           title: "Collect required documents",
           description:
-            "Automatically gather forms, certifications, and paperwork.",
+            "Securely request and store forms, certifications, and supporting documents in one streamlined workflow.",
         },
         {
-          icon: "calendar_today",
-          title: "Book appointments",
-          description: "Schedule meetings directly without human intervention.",
-        },
-        {
-          icon: "swap_horiz",
-          title: "Human handover controls",
+          icon: "priority_high",
+          title: "Route urgent cases correctly",
           description:
-            "Seamlessly transfer complex cases to your team with full context.",
+            "Identify high-priority enquiries and instantly direct them to the appropriate department or staff member.",
+        },
+        {
+          icon: "support_agent",
+          title: "Support internal staff queries",
+          description:
+            "Provide employees with quick answers, policy guidance, and process support through an AI assistant.",
         },
       ],
       deployment: {
